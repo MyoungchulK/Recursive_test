@@ -4,6 +4,11 @@ import click
 @click.option('-i1', '--inputs1', default = '1, 2, 2, 3, 4, 4')
 @click.option('-i2', '--inputs2', default = '3, 4, 5, 5, 6, 4')
 def main(inputs1, inputs2):
+    
+    if len(inputs1) == 0 or len(inputs2) == 0:
+        print('None')
+        return
+
     arr1 = list(map(int, inputs1.split(',')))
     arr2 = list(map(int, inputs2.split(',')))
     print(arr1)
